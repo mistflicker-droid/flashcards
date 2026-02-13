@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Law Flashcards</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Case Law & Amendments Flashcards</h1>
+
+    <div class="top-row">
+      <div class="search-wrap">
+        <input id="searchInput" type="text" placeholder="Search (e.g., Garner, 4th Amendment)..." autocomplete="off" />
+        <datalist id="cardTitles"></datalist>
+      </div>
+
+      <div class="controls">
+        <button id="prevBtn" title="Left Arrow">Prev</button>
+        <button id="shuffleBtn">Shuffle</button>
+        <button id="nextBtn" title="Right Arrow">Next</button>
+      </div>
+    </div>
+
+    <div class="mark-row">
+      <button id="knownBtn" class="mark known">Known</button>
+      <button id="missedBtn" class="mark missed">Missed</button>
+      <button id="clearMarkBtn" class="mark neutral">Clear Mark</button>
+      <button id="resetProgressBtn" class="mark neutral">Reset Progress</button>
+    </div>
+
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <main class="main">
+    <div id="card" class="card" role="button" tabindex="0" aria-label="Flashcard (click to flip)">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="label">Front</div>
+          <div id="frontText" class="content"></div>
+        </div>
+        <div class="card-face card-back">
+          <div class="label">Back</div>
+          <div id="backText" class="content"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="meta">
+      <span id="counter"></span>
+      <span id="statusPill" class="pill">Unmarked</span>
+      <span class="hint">Click card (or Space/Enter) to flip • ←/→ to navigate</span>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
